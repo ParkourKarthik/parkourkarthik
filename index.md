@@ -6,9 +6,9 @@ Thanks for having a visit to my page!!
 
 <a href="https://parkourkarthik.github.io/ship-game/">Ship Game</a>
 
-<a href="https://parkourkarthik.github.io/canvas-paint/dist/">Canvas paint</a>
+<a href="https://parkourkarthik.github.io/canvas-paint/dist/">PK Paint</a>
 
-<a href="https://parkourkarthik.github.io/pkchart/">simple chart lib</a>
+<a href="https://parkourkarthik.github.io/pkchart/">PK Chart Library</a>
 
 ### npm Packages
-<a href="https://www.npmjs.com/package/cordova-helper">cordova-helper</a>
+<a href="https://www.npmjs.com/package/cordova-helper">Cordova Helper</a>
