@@ -1,0 +1,134 @@
+/* Custom properties/variables  */
+:root {
+  --main-white: #f0f0f0;
+  --main-red: OrangeRed;
+  --main-blue: DodgerBlue;
+  --main-gray: #303841;
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60%;
+  margin:0;
+  scroll-behaviour: smooth;
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+#navbar {
+  font-size: 100%;
+  width: 100%;
+  background: var(--main-blue);
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+#navbar ul {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+
+a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  line-height: 0.5;
+}
+
+#welcome-section > p {
+  font-size: 2rem;
+  color: white;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  padding-bottom: 10rem;
+  padding-top: 2rem;
+}
+
+#projects {
+  background:var(--main-red);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+#contact {
+  text-align: center;
+}
+
+#contact > a {
+  background: var(--main-blue);
+}
+
+a:hover {
+  background: var(--main-red);
+}
+
+#contact > a:hover {
+  background: black;
+  transition: background 0.3s ease-out;
+}
+
+.project-tile {
+  background: black;
+}
+
+.project-tile:hover {
+  background: var(--main-blue);
+  transition: background 0.3s ease-out;
+}
