@@ -31,9 +31,12 @@ jobs:
         npm install
         npm run build
 
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+    - name: Deploy to user page🚀
+      uses: cpina/github-action-push-to-another-repository@master
+      env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+        source-directory: build
+        destination-github-username: parkourkarthik
+        destination-repository-name: parkourkarthik.github.io
+        user-email: parkourkarthik@gmail.com
