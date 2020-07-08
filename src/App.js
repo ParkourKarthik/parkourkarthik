@@ -1,5 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './App.css';
+import TiltComponent from './Components/TiltComponent';
+import Project from './Components/Project';
 
 function App() {
   const Projects = () => {
@@ -37,67 +39,6 @@ function App() {
     ];
     return projects.map((x, i) => <TiltedProject project={x} key={i} />);
   };
-  function TiltComponent(Comp) {
-    const Tilt = props => {
-      const ref = useRef(null);
-      const handleMove = e => {
-        const xVal = e.layerX;
-        const yVal = e.layerY;
-        const height = ref.current.clientHeight;
-        const width = ref.current.clientWidth;
-        const xRotation = 20 * ((yVal - height / 2) / height);
-        const yRotation = -20 * ((xVal - width / 2) / width);
-
-        const transString = `perspective(800px) scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
-        ref.current.style.transform = transString;
-      };
-
-      useEffect(() => {
-        const el = ref.current;
-        ref.current.classList.add('boxShadow');
-        /* Get the height and width of the element */
-        el.addEventListener('mousemove', handleMove);
-        el.addEventListener('mouseout', () => {
-          el.style.transform =
-            'perspective(500px) scale(1) rotateX(0) rotateY(0)';
-        });
-        el.addEventListener('mousedown', () => {
-          el.style.transform =
-            'perspective(500px) scale(0.9) rotateX(0) rotateY(0)';
-        });
-        el.addEventListener('mouseup', () => {
-          el.style.transform =
-            'perspective(500px) scale(1.1) rotateX(0) rotateY(0)';
-        });
-      }, []);
-      return <Comp {...props} forwardedRef={ref} />;
-    };
-    return Tilt;
-  }
-
-  const Project = props => {
-    const { forwardedRef, project } = props;
-    return (
-      <a
-        ref={forwardedRef}
-        target='_blank'
-        rel='noopener noreferrer'
-        href={project.url}
-        className={`project-tile ${project.mobile && 'mobile'}`}
-        // style={{
-        //   backgroundImage: `url(${project.imageUrl})`,
-        //   backgroundSize: '100%'
-        // }}
-      >
-        <div className='project-title'>
-        <div>{project.name}</div>
-        <div className='project-seperator'></div>
-        <div className='project-skills'>{project.techs}</div>
-        </div>
-        <img src={project.imageUrl} alt={project.name}/>
-      </a>
-    );
-  };
 
   const WelcomeNote = props => {
     const { forwardedRef } = props;
@@ -105,7 +46,10 @@ function App() {
       <div ref={forwardedRef} id='welcome-note'>
         <h1>Hey I am Karthik,</h1>
         <p>a full stack web developer.</p>
-        <p className="sub-text">An enthusiastic developer who loves solving problems, sticking to a never ending learning curve.</p>
+        <p className='sub-text'>
+          An enthusiastic developer who loves solving problems, sticking to a
+          never ending learning curve.
+        </p>
       </div>
     );
   };
@@ -139,16 +83,47 @@ function App() {
         </div>
       </section>
       <section id='contact'>
-        <a
-          id='profile-link'
-          href='https://github.com/parkourkarthik'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='btn contact-details'
-        >
-          <i className='fab fa-github'></i> GitHub
-        </a>
+      <h2>Find me on..</h2>
+        <div className='contacts-container'>
+          <a
+            id='profile-link'
+            href='https://github.com/parkourkarthik'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btn contact-details'
+          >
+            <i className='fab fa-github'></i> GitHub
+          </a>
+          <a
+            id='profile-link'
+            href='https://twitter.com/Parkourkarthik'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btn contact-details'
+          >
+            <i className='fab fa-twitter'></i> Twitter
+          </a>
+          <a
+            id='profile-link'
+            href='https://www.linkedin.com/in/karthikayan-pazhanivel-501a0051'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btn contact-details'
+          >
+            <i className='fab fa-linkedin'></i> LinkedIn
+          </a>
+          <a
+            id='profile-link'
+            href='https://stackoverflow.com/users/3098008/parkourkarthik'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btn contact-details'
+          >
+            <i className='fab fa-stack-overflow'></i> StackOverflow
+          </a>
+        </div>
       </section>
+      <footer>&copy; Made with <i className='fab fa-react'></i> by Karthik.</footer>
     </div>
   );
 }
