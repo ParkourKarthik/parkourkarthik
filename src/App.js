@@ -7,6 +7,7 @@ function App() {
       {
         name: 'EMPLOYEE REVIEW',
         url: 'https://github.com/ParkourKarthik/EmployeeReview',
+        techs: 'Reactjs, nodejs, Mongodb',
         imageUrl:
           'https://user-images.githubusercontent.com/9585305/86875085-54caed00-c0ff-11ea-9045-2a092a28441c.png'
       },
@@ -14,6 +15,7 @@ function App() {
         name: 'SIMPLE SCHEDULER',
         url: 'https://github.com/ParkourKarthik/simplescheduler',
         mobile: true,
+        techs: 'ReactNative, nodejs, Mongodb',
         imageUrl:
           'https://user-images.githubusercontent.com/9585305/85940522-8b07b000-b93a-11ea-8f0f-6b0bf9ce76f8.png'
       },
@@ -21,12 +23,14 @@ function App() {
         name: 'COLOR CONFUSION',
         url: 'https://github.com/ParkourKarthik/ColorConfusion',
         mobile: true,
+        techs: 'Kotlin',
         imageUrl:
-          'https://user-images.githubusercontent.com/9585305/83961337-a0e00300-a8af-11ea-9b0e-8f2317f3c3fc.png'
+          'https://user-images.githubusercontent.com/9585305/86947730-ce97c080-c169-11ea-967b-a603069adfaa.png'
       },
       {
         name: 'SHIP GAME',
         url: 'https://github.com/ParkourKarthik/ship-game',
+        techs: 'HTML, JS, CSS',
         imageUrl:
           'https://user-images.githubusercontent.com/9585305/86877760-1cc6a880-c105-11ea-8dcb-29e1d7bb9e65.png'
       }
@@ -85,7 +89,11 @@ function App() {
         //   backgroundSize: '100%'
         // }}
       >
-        <div style={{fontWeight: 900}}>{project.name}</div>
+        <div className='project-title'>
+        <div>{project.name}</div>
+        <div className='project-seperator'></div>
+        <div className='project-skills'>{project.techs}</div>
+        </div>
         <img src={project.imageUrl} alt={project.name}/>
       </a>
     );
@@ -96,7 +104,8 @@ function App() {
     return (
       <div ref={forwardedRef} id='welcome-note'>
         <h1>Hey I am Karthik,</h1>
-        <p>a full stack web developer</p>
+        <p>a full stack web developer.</p>
+        <p className="sub-text">An enthusiastic developer who loves solving problems, sticking to a never ending learning curve.</p>
       </div>
     );
   };
