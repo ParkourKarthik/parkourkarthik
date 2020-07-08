@@ -5,28 +5,30 @@ function App() {
   const Projects = () => {
     const projects = [
       {
-        name: 'SIMPLE SCHEDULER',
-        url: 'https://github.com/ParkourKarthik/simplescheduler',
-        imageUrl:
-          'https://user-images.githubusercontent.com/9585305/85940522-8b07b000-b93a-11ea-8f0f-6b0bf9ce76f8.png'
-      },
-      {
         name: 'EMPLOYEE REVIEW',
         url: 'https://github.com/ParkourKarthik/EmployeeReview',
         imageUrl:
+          'https://user-images.githubusercontent.com/9585305/86875085-54caed00-c0ff-11ea-9045-2a092a28441c.png'
+      },
+      {
+        name: 'SIMPLE SCHEDULER',
+        url: 'https://github.com/ParkourKarthik/simplescheduler',
+        mobile: true,
+        imageUrl:
           'https://user-images.githubusercontent.com/9585305/85940522-8b07b000-b93a-11ea-8f0f-6b0bf9ce76f8.png'
       },
       {
-        name: 'CORDOVA HELPER',
-        url: 'https://github.com/ParkourKarthik/cordova-helper',
+        name: 'COLOR CONFUSION',
+        url: 'https://github.com/ParkourKarthik/ColorConfusion',
+        mobile: true,
         imageUrl:
-          'https://user-images.githubusercontent.com/9585305/85940522-8b07b000-b93a-11ea-8f0f-6b0bf9ce76f8.png'
+          'https://user-images.githubusercontent.com/9585305/83961337-a0e00300-a8af-11ea-9b0e-8f2317f3c3fc.png'
       },
       {
         name: 'SHIP GAME',
         url: 'https://github.com/ParkourKarthik/ship-game',
         imageUrl:
-          'https://user-images.githubusercontent.com/9585305/85940522-8b07b000-b93a-11ea-8f0f-6b0bf9ce76f8.png'
+          'https://user-images.githubusercontent.com/9585305/86877760-1cc6a880-c105-11ea-8dcb-29e1d7bb9e65.png'
       }
     ];
     return projects.map((x, i) => <TiltedProject project={x} key={i} />);
@@ -77,13 +79,13 @@ function App() {
         target='_blank'
         rel='noopener noreferrer'
         href={project.url}
-        className='project-tile'
+        className={`project-tile ${project.mobile && 'mobile'}`}
         // style={{
         //   backgroundImage: `url(${project.imageUrl})`,
         //   backgroundSize: '100%'
         // }}
       >
-        <div style={{fontWeight: 900, marginBottom: '10px'}}>{project.name}</div>
+        <div style={{fontWeight: 900}}>{project.name}</div>
         <img src={project.imageUrl} alt={project.name}/>
       </a>
     );
