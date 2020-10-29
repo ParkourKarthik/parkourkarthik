@@ -29,6 +29,11 @@ body {
   height: 100vh;
   overflow: hidden;
   background: var(--black-currant);
+  cursor: none;
+}
+
+a {
+  cursor: none;
 }
 
 #root {
@@ -81,7 +86,7 @@ body {
   padding: 0;
 }
 
-#navbar ul>li {
+#navbar ul > li {
   padding: 0 20px;
 }
 
@@ -169,7 +174,7 @@ h1 {
   padding-bottom: 5rem;
   padding-top: 2rem;
   color: var(--fuchsia-pink);
-  text-shadow: 0 0 10px var(--bossonova) , 0 0 20px var(--riptide);
+  text-shadow: 0 0 10px var(--bossonova), 0 0 20px var(--riptide);
 }
 
 #projects {
@@ -212,7 +217,7 @@ h1 {
   position: absolute;
   bottom: 50px;
   color: var(--fuchsia-pink);
-  text-shadow: 0 0 10px var(--bossonova) , 0 0 20px var(--riptide);
+  text-shadow: 0 0 10px var(--bossonova), 0 0 20px var(--riptide);
   left: -50px;
   text-align: left;
 }
@@ -254,6 +259,29 @@ footer {
   padding: 5px 0;
   color: var(--riptide);
 }
+
+
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+  z-index: 11000;
+  background: var(--riptide);
+}
+.cursor-canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 12000;
+}
+
 
 @media (min-width: 1240px) {
   .projects-grid {
