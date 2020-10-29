@@ -4,6 +4,7 @@ import TiltComponent from './Components/TiltComponent';
 import Project from './Components/Project';
 import { projects, socialConnects } from './Constants';
 import SocialConnect from './Components/SocialConnect';
+import CustomCursor from "./Components/CustomCursor";
 
 function App() {
   const Projects = () => {
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className='App'>
+      <CustomCursor />
       <nav id='navbar'>
         <ul>
           <li>
