@@ -12,7 +12,7 @@ const projects = [
     mobile: true,
     techs: 'ReactNative, nodejs, Mongodb',
     imageUrl:
-      'https://user-images.githubusercontent.com/9585305/85940522-8b07b000-b93a-11ea-8f0f-6b0bf9ce76f8.png'
+      'https://user-images.githubusercontent.com/9585305/97676350-87d22b80-1ab6-11eb-8baa-5560d336f913.jpg'
   },
   {
     name: 'COLOR CONFUSION',
@@ -20,7 +20,7 @@ const projects = [
     mobile: true,
     techs: 'Kotlin',
     imageUrl:
-      'https://user-images.githubusercontent.com/9585305/86947730-ce97c080-c169-11ea-967b-a603069adfaa.png'
+      'https://user-images.githubusercontent.com/9585305/97676511-c7007c80-1ab6-11eb-9754-828f5a2cf07f.jpg'
   },
   {
     name: 'SHIP GAME',
