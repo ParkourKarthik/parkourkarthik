@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import TiltComponent from './Components/TiltComponent';
 import Project from './Components/Project';
 import { projects, socialConnects } from './Constants';
 import SocialConnect from './Components/SocialConnect';
-import CustomCursor from "./Components/CustomCursor";
+import CustomCursor from './Components/CustomCursor';
 
 function App() {
+  const defaultMQuery = (window.innerWidth / 16) > 62.5;
+  const [mQuery, setMQuery] = useState(defaultMQuery);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 62.5rem)');
+    mediaQuery.addEventListener('change', (ev) => {
+      setMQuery(ev.matches);
+    });
+    return () => {
+      mediaQuery.removeEventListener('change', setMQuery);
+    };
+  }, []);
   const Projects = () => {
     return projects.map((x, i) => <TiltedProject project={x} key={i} />);
   };
@@ -15,7 +27,7 @@ function App() {
     return socialConnects.map((x, i) => <SocialConnect {...x} key={i} />);
   };
 
-  const WelcomeNote = props => {
+  const WelcomeNote = (props) => {
     const { forwardedRef } = props;
     return (
       <div ref={forwardedRef} id='welcome-note'>
@@ -31,10 +43,9 @@ function App() {
 
   const TiltedWelcomeNote = TiltComponent(WelcomeNote);
   const TiltedProject = TiltComponent(Project);
-
   return (
     <div className='App'>
-      <CustomCursor />
+      {mQuery && <CustomCursor />}
       <nav id='navbar'>
         <ul>
           <li>

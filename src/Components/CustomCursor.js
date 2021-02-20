@@ -114,8 +114,8 @@ const CustomCursor = () => {
 
   return (
     <div>
-      <div class='cursor cursor-dot'></div>
-      <canvas class='cursor cursor-canvas' resize></canvas>
+      <div className='cursor cursor-dot'></div>
+      <canvas className='cursor cursor-canvas'></canvas>
     </div>
   );
 };
