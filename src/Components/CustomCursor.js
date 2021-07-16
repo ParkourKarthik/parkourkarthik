@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import paper from 'paper';
+import useWindowSize from './UseWindowResize';
 
 const CustomCursor = () => {
+  const {width, height} = useWindowSize();
   useEffect(() => {
     let clientX = -100;
     let clientY = -100;
@@ -110,7 +112,7 @@ const CustomCursor = () => {
     initCursor();
     initCanvas();
     initHovers();
-  }, []);
+  }, [width, height]);
 
   return (
     <div>
