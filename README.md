@@ -3,7 +3,7 @@
   <img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" alt="Cartoon Coding Banner" width="600"/>
 </p>
 
-# 👋 Hi, I'm Karthikayan Pazhanivel (ParkourKarthik)!
+# 👋 Hi, I'm Karthikayan (ParkourKarthik)!
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/parkourkarthik)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karthikayan-pazhanivel)
