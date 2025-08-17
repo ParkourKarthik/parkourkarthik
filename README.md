@@ -14,7 +14,7 @@
 
 ---
 
-🌟 **Software Engineer** | 🚀 JavaScript, TypeScript, C#, .NET | ⚛️ React, Vue.js  
+🌟 **Software Engineer** | 🚀 JavaScript, TypeScript, C#, .NET, Java, Python | ⚛️ React, Vue.js  
 🤖 AI Agent Enthusiast | 🏃 Parkour & Calisthenics Practitioner
 
 ---
